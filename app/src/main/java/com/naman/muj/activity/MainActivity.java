@@ -16,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String jsonData = intent.getStringExtra("data");
         String title = intent.getStringExtra("title");
-        Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
+        if(title == "" || title == null){
+
+        }
+        else{
+            Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
+        }
     }
 }

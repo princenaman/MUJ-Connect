@@ -36,7 +36,7 @@ public class ParseUtils {
         });
     }
 
-    public static void subscribeWithEmail(String email,String name, String imei) {
+    public static boolean subscribeWithEmail(String email,String name, String imei) {
         ParseInstallation installation = ParseInstallation.getCurrentInstallation();
 
         installation.put("email", email);
@@ -46,5 +46,7 @@ public class ParseUtils {
         installation.saveInBackground();
 
         Log.e(TAG, "Subscribed with email: " + email);
+
+        return true;
     }
 }

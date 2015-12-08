@@ -112,8 +112,14 @@ public class MUJConnectLogin extends AppCompatActivity{
             // perform the user login attempt.
             showProgress(true);
             pref.createLoginSession(email, name, imei);
-            subscribeWithEmail(email, name, imei);
-
+            boolean isOk = subscribeWithEmail(email, name, imei);
+            if (isOk) {
+                showProgress(false);
+                Intent intent = new Intent(MUJConnectLogin.this, MainActivity.class);
+                startActivity(intent);
+                Toast.makeText(this,"Logged In",Toast.LENGTH_SHORT).show();
+                finish();
+            }
         }
     }
 
