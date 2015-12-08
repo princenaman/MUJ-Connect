@@ -41,9 +41,9 @@ public class NotificationUtils {
 
         if (isAppIsInBackground(mContext)) {
             // notification icon
-            int icon = R.mipmap.ic_launcher;
+            int icon = R.drawable.ic_launcher;
 
-            int smallIcon = R.mipmap.ic_launcher;
+            int smallIcon = R.drawable.ic_launcher;
 
             int mNotificationId = AppConfig.NOTIFICATION_ID;
             intent.putExtra("title", title);
